@@ -10,4 +10,5 @@ Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/mast
 Set-ExecutionPolicy -Force Bypass
 .\windows-config.ps1
 Set-ExecutionPolicy -Force RemoteSigned
+rm .\windows-config.ps1
 ```
