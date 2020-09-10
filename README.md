@@ -7,5 +7,7 @@ Start up PowerShell as an admin, then run the follow commands to run the script:
 
 ```powershell
 Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/master/windows-config.ps1 -OutFile windows-config.ps1
+Set-ExecutionPolicy -Force Bypass
 .\windows-config.ps1
+Set-ExecutionPolicy -Force RemoteSigned
 ```
