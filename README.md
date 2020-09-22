@@ -7,7 +7,7 @@ A PowerShell script to set up a fresh Windows 10 install with the settings I pre
 Start up PowerShell as an admin, then run the follow commands to run the script:
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/master/windows-setup.ps1 -OutFile windows-setup.ps1
+Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-setup.ps1 -OutFile windows-setup.ps1
 Set-ExecutionPolicy -Force Bypass
 .\windows-setup.ps1
 Set-ExecutionPolicy -Force RemoteSigned
