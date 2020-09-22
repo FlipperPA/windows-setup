@@ -33,7 +33,6 @@ remove-item $Env:TEMP\startlayout.xml
 Write-Output("Uninstalling OneDrive... download it if you want it.")
 
 taskkill.exe /F /IM "OneDrive.exe"
-taskkill.exe /F /IM "explorer.exe"
 
 echo "Remove OneDrive"
 if (Test-Path "$env:systemroot\System32\OneDriveSetup.exe") {
