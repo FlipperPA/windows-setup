@@ -38,5 +38,6 @@ Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDe
 Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager -Name RotatingLockScreenOverlayEnabled -Value 0
 Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager -Name SubscribedContent-338387Enabled -Value 0
 
-# Finally, stop explorer; it will auto-restart
+# Finally, stop and restart explorer.
 Get-Process -Name explorer | Stop-Process
+start explorer.exe
