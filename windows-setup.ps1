@@ -6,7 +6,7 @@ Write-Output("Uninstalling all the packaged crapware; we will leave Windows Stor
 DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -replace("PackageName : ", "")} | select-string "^((?!WindowsStore).)*$" | ForEach-Object {Remove-AppxPackage -allusers -package $_}
 
 Write-Host "Unpinning all the nonsense from the start menu..."
-$startlayoutstr = @"
+$start_menu_layout = @"
 <?xml version="1.0" encoding="utf-8"?>
 <LayoutModificationTemplate
     xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification"
@@ -37,9 +37,9 @@ $startlayoutstr = @"
     </CustomTaskbarLayoutCollection>
 </LayoutModificationTemplate>
 "@
-Add-content $Env:TEMP\startlayout.xml $startlayoutstr
+Add-content $Env:TEMP\start_menu_layout.xml $start_menu_layout
 Import-StartLayout -layoutpath $Env:TEMP\startlayout.xml -mountpath $Env:SYSTEMDRIVE\
-Remove-Item $Env:TEMP\startlayout.xml
+Remove-Item $Env:TEMP\start_menu_layout.xml
 
 # Uninstall OneDrive - this is a bit of an adventure...
 Write-Output("Uninstalling OneDrive... download it if you want it.")
