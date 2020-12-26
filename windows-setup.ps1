@@ -38,7 +38,7 @@ $start_menu_layout = @"
 </LayoutModificationTemplate>
 "@
 Add-content $Env:TEMP\start_menu_layout.xml $start_menu_layout
-Import-StartLayout -layoutpath $Env:TEMP\startlayout.xml -mountpath $Env:SYSTEMDRIVE\
+Import-StartLayout -layoutpath $Env:TEMP\start_menu_layout.xml -mountpath $Env:SYSTEMDRIVE\
 Remove-Item $Env:TEMP\start_menu_layout.xml
 
 # Uninstall OneDrive - this is a bit of an adventure...
