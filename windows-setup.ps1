@@ -15,26 +15,26 @@ $start_menu_layout = @"
     xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout"
     Version="1">
   <LayoutOptions StartTileGroupCellWidth="6" StartTileGroupsColumnCount="1" />
-  <DefaultLayoutOverride>
+  <DefaultLayoutOverride LayoutCustomizationRestrictionType="OnlySpecifiedGroups">
     <StartLayoutCollection>
       <defaultlayout:StartLayout GroupCellWidth="6" xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout">
-        <start:Group Name="One day at a time!" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout">
-          <start:Tile Size="2x2" Column="0" Row="0" AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />
-          <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="Microsoft.Windows.Computer" />
-          <start:Tile Size="2x2" Column="4" Row="0" AppUserModelID="Microsoft.WindowsStore_8wekyb3d8bbwe!App" />
-        </start:Group>        
+         <start:Group Name="Main" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout">
+           <start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationLinkPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\Computer.lnk" />
+           <start:Tile Size="2x2" Column="2" Row="0" AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />
+           <start:Tile Size="2x2" Column="4" Row="0" AppUserModelID="Microsoft.WindowsStore_8wekyb3d8bbwe!App" />
+         </start:Group>
       </defaultlayout:StartLayout>
     </StartLayoutCollection>
   </DefaultLayoutOverride>
-    <CustomTaskbarLayoutCollection>
-      <defaultlayout:TaskbarLayout>
-        <taskbar:TaskbarPinList>
-          <taskbar:UWA AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />
-          <taskbar:DesktopApp DesktopApplicationLinkPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk" />
-          <taskbar:DesktopApp DesktopApplicationLinkPath="%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Accessories\Snipping Tool.lnk" />
-        </taskbar:TaskbarPinList>
-      </defaultlayout:TaskbarLayout>
-    </CustomTaskbarLayoutCollection>
+  <CustomTaskbarLayoutCollection PinListPlacement="Replace">
+    <defaultlayout:TaskbarLayout>
+      <taskbar:TaskbarPinList>
+        <taskbar:UWA AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />
+        <taskbar:DesktopApp DesktopApplicationLinkPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk" />
+        <taskbar:DesktopApp DesktopApplicationLinkPath="%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Accessories\Snipping Tool.lnk" />
+      </taskbar:TaskbarPinList>
+    </defaultlayout:TaskbarLayout>
+  </CustomTaskbarLayoutCollection>
 </LayoutModificationTemplate>
 "@
 Add-content $Env:TEMP\start_menu_layout.xml $start_menu_layout
