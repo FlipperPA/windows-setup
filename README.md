@@ -4,26 +4,26 @@ A PowerShell script to set up a fresh Windows 10 install with the settings I pre
 
 ## How to Use It
 
-### Windows 10
-
-Start up PowerShell as an admin, then run the follow commands to run the script:
-
-```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-setup.ps1 -OutFile windows-setup.ps1
-Set-ExecutionPolicy -Force Bypass
-.\windows-10-setup.ps1
-Set-ExecutionPolicy -Force RemoteSigned
-rm .\windows-10-setup.ps1
-```
-
 ### Windows 11
 
 Support is coming soon!
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-setup.ps1 -OutFile windows-setup.ps1
+Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-11-setup.ps1 -OutFile windows-setup.ps1
 Set-ExecutionPolicy -Force Bypass
-.\windows-11-setup.ps1
+.\windows-setup.ps1
 Set-ExecutionPolicy -Force RemoteSigned
 rm .\windows-11-setup.ps1
+```
+
+### Windows 10 - Legacy
+
+Start up PowerShell as an admin, then run the follow commands to run the script:
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-10-setup.ps1 -OutFile windows-setup.ps1
+Set-ExecutionPolicy -Force Bypass
+.\windows-setup.ps1
+Set-ExecutionPolicy -Force RemoteSigned
+rm .\windows-10-setup.ps1
 ```
