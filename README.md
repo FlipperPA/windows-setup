@@ -6,7 +6,7 @@ A PowerShell script to set up a fresh Windows 10 install with the settings I pre
 
 ### Windows 11
 
-Support is coming soon!
+Support is coming soon! If you are installing fresh, read about how to install with a local account only below.
 
 ```powershell
 Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-11-setup.ps1 -OutFile windows-setup.ps1
@@ -15,6 +15,13 @@ Set-ExecutionPolicy -Force Bypass
 Set-ExecutionPolicy -Force RemoteSigned
 rm .\windows-11-setup.ps1
 ```
+
+#### Installing With a Local Account
+
+* During setup, you will come to the `Let's name your device` step; name your device and click `Next`.
+* Press Shift + F10 on your keyboard to open the command prompt.
+* Enter the command `taskkill /F /IM oobenetworkconnectionflow.exe`, and you should see a `SUCCESS` message.
+* Since you have killed Microsoft's telemetry service, you should now be prompted to create a local account with a message, `Who's going to use this device?` Choose your desired username.
 
 ### Windows 10 - Legacy
 
