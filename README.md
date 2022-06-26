@@ -13,7 +13,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main
 Set-ExecutionPolicy -Force Bypass
 .\windows-setup.ps1
 Set-ExecutionPolicy -Force RemoteSigned
-rm .\windows-11-setup.ps1
+rm .\windows-setup.ps1
 ```
 
 #### Installing With a Local Account
