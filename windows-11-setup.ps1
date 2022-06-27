@@ -14,6 +14,8 @@ Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.2
 add-appxpackage -Path ".\Winget.msixbundle"
 
 Write-Output("Uninstalling crap we probably don't want, like Teams and OneDrive...")
+winget uninstall "Spotify Music"
+winget uninstall "Disney+"
 winget --accept-package-agreements uninstall onedrive
 
 # Finally, stop and restart explorer.
