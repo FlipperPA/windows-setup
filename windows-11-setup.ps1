@@ -8,6 +8,8 @@ DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -r
 # Get-AppxPackage *Disney* | Remove-AppxPackage
 
 Write-Output("Installing Winget package manager...")
+Invoke-WebRequest https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile ".\VCLibs.appx"
+add-appxpackage -Path ".\VCLibs.appx"
 Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile ".\Winget.msixbundle"
 add-appxpackage -Path ".\Winget.msixbundle"
 
