@@ -15,7 +15,19 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 
 ## Step 2: Start the Windows 11 Installation
 
+* You'll want to make sure the computer doesn't have an internet connection during installation, if possible. Unplug any USB WiFi devices and ethernet cables before installing, or you won't be able to create a local administrator account.
 * Insert the USB Drive into the system where you are installing Windows 11.
 * **IMPORTANT!** This will wipe all data on this system!
 * Turn on the computer and wait for a few minutes while the Windows 11 setup boots from the USB Drive.
     * If it doesn't boot to the Windows 11 setup, you'll need to figure out how to make the system boot from the USB drive. The varies by system, and Google will be your friend here to figure out how to make your system boot to USB.
+
+## Step 3: After Reboot
+
+* Select your country (defaults to US) and click `NEXT`
+* You can add a second keyboard, or most likely click `SKIP`
+* Click `I Don't Have Internet`, even it is isn't true; we want to create a local account.
+* Click `Continue With Limited Setup`
+* Enter the name of the primary user of the computer, click `NEXT`. The local account will be an Administrator with full rights to this computer.
+* Enter a password for the primary user (or leave it blank). Click `NEXT`.
+* Turn off the options for `Diagnostic Data`, `Inking & Typing`, `Tailored Experiences`, and `Advertising ID`. Click `ACCEPT`.
+* Setup will continue for a few minutes, then you'll be all set to go!
