@@ -30,8 +30,9 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 
 ## Step 3: After Reboot
 
-* Select your country (defaults to US) and click `NEXT`
-* You can add a second keyboard, or most likely click `SKIP`
+* Select your country or region (defaults to US) and click `YES`.
+* Select your keyboard layout (defaults to US) and click `YES`.
+* You can add a second keyboard, or most likely click `SKIP`.
 * Click `I Don't Have Internet`, even it is isn't true; we want to create a local account.
 * Click `Continue With Limited Setup`
 * Enter the name of the primary user of the computer, click `NEXT`. The local account will be an Administrator with full rights to this computer.
