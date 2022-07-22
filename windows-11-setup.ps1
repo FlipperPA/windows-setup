@@ -11,24 +11,23 @@ DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -r
 # add-appxpackage -Path ".\Winget.msixbundle"
 
 Write-Output("Uninstalling more crap we probably don't want, like apps for OneDrive, Spotify, and Disney+...")
-winget uninstall "Cortana"
-winget uninstall "Disney+"
-winget uninstall "Mail and Calendar"
-winget uninstall "Microsoft News"
-winget uninstall "Microsoft OneDrive"
-winget uninstall "Microsoft Tips"
-winget uninstall "MSN Weather"
-winget uninstall "Movies & TV"
-winget uninstall "Office"
-winget uninstall "OneDrive"
-winget uninstall "Spotify Music"
-winget uninstall "Windows Maps"
-winget uninstall "Xbox TCUI"
-winget uninstall "Xbox Game Bar Plugin"
-winget uninstall "Xbox Game Bar"
-winget uninstall "Xbox Identity Provider"
-winget uninstall "Xbox Game Speech Windows"
-winget --accept-package-agreements uninstall onedrive
+winget uninstall "Cortana" --silent --accept-source-agreements
+winget uninstall "Disney+" --silent --accept-source-agreements
+winget uninstall "Mail and Calendar" --silent --accept-source-agreements
+winget uninstall "Microsoft News" --silent --accept-source-agreements
+winget uninstall "Microsoft OneDrive" --silent --accept-source-agreements
+winget uninstall "Microsoft Tips" --silent --accept-source-agreements
+winget uninstall "MSN Weather" --silent --accept-source-agreements
+winget uninstall "Movies & TV" --silent --accept-source-agreements
+winget uninstall "Office" --silent --accept-source-agreements
+winget uninstall "OneDrive" --silent --accept-source-agreements
+winget uninstall "Spotify Music" --silent --accept-source-agreements
+winget uninstall "Windows Maps" --silent --accept-source-agreements
+winget uninstall "Xbox TCUI" --silent --accept-source-agreements
+winget uninstall "Xbox Game Bar Plugin" --silent --accept-source-agreements
+winget uninstall "Xbox Game Bar" --silent --accept-source-agreements
+winget uninstall "Xbox Identity Provider" --silent --accept-source-agreements
+winget uninstall "Xbox Game Speech Windows" --silent --accept-source-agreements
 
 Write-Output("Changing registry settings for taskbar, lockscreen, and more...")
 # Set the Windows Taskbar to never combine items (Windows 7 style)
