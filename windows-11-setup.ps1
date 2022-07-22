@@ -1,9 +1,11 @@
 # This script sets up Windows 11 the way I like it.
 # It should be run in Administrator mode from PowerShell.
+# Makes sure you have all the latest updates before running this!
 
 Write-Output("Uninstalling all the packaged crapware; we will leave Windows Store so anything can be replaced...")
 DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -replace("PackageName : ", "")} | select-string "^((?!WindowsStore).)*$" | ForEach-Object {Remove-AppxPackage -allusers -package $_}
 
+# winget is now installed by default with the latest Windows Updates! Yay!
 # Write-Output("Installing Winget package manager...")
 # Invoke-WebRequest https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile ".\VCLibs.appx"
 # add-appxpackage -Path ".\VCLibs.appx"
