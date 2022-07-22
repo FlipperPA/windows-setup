@@ -4,15 +4,30 @@
 Write-Output("Uninstalling all the packaged crapware; we will leave Windows Store so anything can be replaced...")
 DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -replace("PackageName : ", "")} | select-string "^((?!WindowsStore).)*$" | ForEach-Object {Remove-AppxPackage -allusers -package $_}
 
-Write-Output("Installing Winget package manager...")
-Invoke-WebRequest https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile ".\VCLibs.appx"
-add-appxpackage -Path ".\VCLibs.appx"
-Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile ".\Winget.msixbundle"
-add-appxpackage -Path ".\Winget.msixbundle"
+# Write-Output("Installing Winget package manager...")
+# Invoke-WebRequest https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile ".\VCLibs.appx"
+# add-appxpackage -Path ".\VCLibs.appx"
+# Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile ".\Winget.msixbundle"
+# add-appxpackage -Path ".\Winget.msixbundle"
 
 Write-Output("Uninstalling more crap we probably don't want, like apps for OneDrive, Spotify, and Disney+...")
-winget uninstall "Spotify Music"
+winget uninstall "Cortana"
 winget uninstall "Disney+"
+winget uninstall "Mail and Calendar"
+winget uninstall "Microsoft News"
+winget uninstall "Microsoft OneDrive"
+winget uninstall "Microsoft Tips"
+winget uninstall "MSN Weather"
+winget uninstall "Movies & TV"
+winget uninstall "Office"
+winget uninstall "OneDrive"
+winget uninstall "Spotify Music"
+winget uninstall "Windows Maps"
+winget uninstall "Xbox TCUI"
+winget uninstall "Xbox Game Bar Plugin"
+winget uninstall "Xbox Game Bar"
+winget uninstall "Xbox Identity Provider"
+winget uninstall "Xbox Game Speech Windows"
 winget --accept-package-agreements uninstall onedrive
 
 Write-Output("Changing registry settings for taskbar, lockscreen, and more...")
