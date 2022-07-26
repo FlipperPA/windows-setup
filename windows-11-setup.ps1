@@ -5,8 +5,7 @@
 Write-Output("Uninstalling all the packaged crapware; we will leave Windows Store so anything can be replaced...")
 DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -replace("PackageName : ", "")} | select-string "^((?!WindowsStore).)*$" | select-string "^((?!DesktopAppInstaller).)*$" | ForEach-Object {Remove-AppxPackage -allusers -package $_}
 
-# winget is now installed by default with the latest Windows Updates! Yay!
-# Write-Output("Installing Winget package manager...")
+Write-Output("Installing Winget package manager...")
 Add-AppxPackage 'https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx'
 Invoke-WebRequest https://www.nuget.org/api/v2/package/Microsoft.UI.Xaml/2.7.1 -OutFile ".\UI.Xaml.zip"
 Expand-Archive .\UI.Xaml.zip -DestinationPath ".\uixaml"
