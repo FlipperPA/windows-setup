@@ -33,6 +33,9 @@ winget uninstall "Xbox Game Bar" --silent --accept-source-agreements
 winget uninstall "Xbox Identity Provider" --silent --accept-source-agreements
 winget uninstall "Xbox Game Speech Windows" --silent --accept-source-agreements
 
+Write-Output("Installing SharpKeys keymapper...")
+winget install -e RandyRants.SharpKeys --accept-source-agreements 
+
 Write-Output("Changing registry settings for taskbar, lockscreen, and more...")
 # Set the Windows Taskbar to never combine items (Windows 7 style)
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'TaskbarGlomLevel' -Value 2
