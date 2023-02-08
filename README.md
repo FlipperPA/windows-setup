@@ -25,6 +25,10 @@ rm .\windows-setup.ps1
 * Enter the command `taskkill /F /IM oobenetworkconnectionflow.exe`, and you should see a `SUCCESS` message.
 * Since you have killed Microsoft's telemetry service, you should now be prompted to create a local account with a message, `Who's going to use this device?` Choose your desired username.
 
+#### Taskbar
+
+[This handy app](https://github.com/valinet/ExplorerPatcher) will restore the never-combine style Windows 10 taskbar. Highly recommended!
+
 ### Windows 10 - Legacy
 
 Start up PowerShell as an admin, then run the follow commands to run the script:
