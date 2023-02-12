@@ -71,6 +71,11 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\tzautoupdate" -N
 # Disable prompts to create an MSFT account
 Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Name "EnableLUA" -Value "00000000";
 
+Write-Output("Disabling as much data collection / mining as we can...")
+Get-Service DiagTrack | Set-Service -StartupType Disabled
+Get-Service dmwappushservice | Set-Service -StartupType Disabled
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Type DWord -Value 0
+
 # Currently, we cannot restore the Classic Taskbar or enable any of the features because it breaks the Start Menu.
 # The only way to enable that is with a third-party start menu when Undocking is disabled. :(
 # Restore the Classic Taskbar in Windows 11
