@@ -31,7 +31,7 @@ rm .\windows-setup.ps1
 
 #### Telemetry and Data Collection
 
-* The PowerShell script above is a good start, but [the ShutUp application](https://www.oo-software.com/en/shutup10) is also HIGHLY recommend to shut off the rest of MSFT's Big Brother spyware.
+The PowerShell script above is a good start, but [the ShutUp application](https://www.oo-software.com/en/shutup10) is also HIGHLY recommend to shut off the rest of MSFT's Big Brother spyware.
 
 ### Windows 10 - Legacy
 
