@@ -8,7 +8,7 @@ A PowerShell script to set up a fresh Windows install with the settings I prefer
 
 ### Windows 11
 
-Be sure you have installed updated *all* Windows updates to be current. If you are installing fresh, read about how to install with a local account only below.
+Be sure you have installed *all* Windows updates to be current. If you are installing fresh, read about how to install with a local account only below.
 
 ```powershell
 Invoke-WebRequest https://raw.githubusercontent.com/FlipperPA/windows-setup/main/windows-11-setup.ps1 -OutFile windows-setup.ps1
