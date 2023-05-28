@@ -20,7 +20,9 @@ rm .\windows-setup.ps1
 
 #### Installing With a Local Account
 
-* During setup, you will come to the `Let's name your device` step; name your device and click `Next`.
+* During setup, you will come to one of two screens:
+    * A `Let's name your device` screen, in which case, name your device and click `Next`.
+    * A connect to network screen, in which case, just proceed to the steps below.
 * Press Shift + F10 on your keyboard to open the command prompt.
 * Enter the command `taskkill /F /IM oobenetworkconnectionflow.exe`, and you should see a `SUCCESS` message.
 * Since you have killed Microsoft's telemetry service, you should now be prompted to create a local account with a message, `Who's going to use this device?` Choose your desired username.
