@@ -28,7 +28,8 @@ This will NOT PROMPT you to erase your hard drive; that decision will have been 
 * Insert the USB Drive into the system where you are installing Windows 11.
 * **IMPORTANT!** This will wipe all data on this system!
 * Turn on the computer and wait for a few minutes while the Windows 11 setup boots from the USB Drive.
-    * If it doesn't boot to the Windows 11 setup, you'll need to figure out how to make the system boot from the USB drive. The varies by system, and Google will be your friend here to figure out how to make your system boot to USB.
+    * If it doesn't boot to the Windows 11 setup, you'll need to figure out how to make the system boot from the USB drive.
+    * The varies by system, and Google will be your friend here to figure out how to make your system boot to USB.
 * Choose your languages and keyboard layout, and click `NEXT`.
 * Click `INSTALL NOW`. It'll take a minute for setup to start.
 * Check the checkbox to accept the terms, then click `NEXT`.
