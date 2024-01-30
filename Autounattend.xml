@@ -8,7 +8,8 @@ Usage:
 * If using the Windows 11 Media Creation Tool, create a bootable USB stick.
 * Copy this file to the root directory of the USB.  That's it! 
 
-The only user interaction required is the selection of Win 11 version.
+* The only user interaction required is the selection of Win 11 version and destination disk.
+* A commented-out example of how to automatically apply partitions in included; this is risky.
 
 Tests:
 
@@ -18,9 +19,8 @@ Only tested with EUFI.  MBR uses a different config format.
 
 Settings: 
 
-Disk 0 is wiped then used to install Windows.
 OOBE requires no interaction.
-Local admin user named "admin" is crated.  Password is "password". 
+Local admin user named "admin" is crated without a password. 
 No license is applied.
 
 Helpful links:
@@ -69,30 +69,26 @@ Helpful links:
 					<Path>reg add HKLM\System\Setup\LabConfig /v BypassStorageCheck /t reg_dword /d 0x00000001 /f</Path>
 				</RunSynchronousCommand>
 			</RunSynchronous>
-			<DiskConfiguration>
+			<!-- DiskConfiguration>
 				<Disk wcm:action="add">
 					<DiskID>0</DiskID>
 					<WillWipeDisk>true</WillWipeDisk>
 					<CreatePartitions>
-						<!-- Windows RE Tools partition -->
 						<CreatePartition wcm:action="add">
 							<Order>1</Order>
 							<Type>Primary</Type>
 							<Size>300</Size>
 						</CreatePartition>
-						<!-- System partition (ESP) -->
 						<CreatePartition wcm:action="add">
 							<Order>2</Order>
 							<Type>EFI</Type>
 							<Size>100</Size>
 						</CreatePartition>
-						<!-- Microsoft reserved partition (MSR) -->
 						<CreatePartition wcm:action="add">
 							<Order>3</Order>
 							<Type>MSR</Type>
 							<Size>128</Size>
 						</CreatePartition>
-						<!-- Windows partition -->
 						<CreatePartition wcm:action="add">
 							<Order>4</Order>
 							<Type>Primary</Type>
@@ -100,7 +96,6 @@ Helpful links:
 						</CreatePartition>
 					</CreatePartitions>
 					<ModifyPartitions>
-						<!-- Windows RE Tools partition -->
 						<ModifyPartition wcm:action="add">
 							<Order>1</Order>
 							<PartitionID>1</PartitionID>
@@ -108,19 +103,16 @@ Helpful links:
 							<Format>NTFS</Format>
 							<TypeID>DE94BBA4-06D1-4D40-A16A-BFD50179D6AC</TypeID>
 						</ModifyPartition>
-						<!-- System partition (ESP) -->
 						<ModifyPartition wcm:action="add">
 							<Order>2</Order>
 							<PartitionID>2</PartitionID>
 							<Label>System</Label>
 							<Format>FAT32</Format>
 						</ModifyPartition>
-						<!-- MSR partition does not need to be modified -->
 						<ModifyPartition wcm:action="add">
 							<Order>3</Order>
 							<PartitionID>3</PartitionID>
 						</ModifyPartition>
-						<!-- Windows partition -->
 						<ModifyPartition wcm:action="add">
 							<Order>4</Order>
 							<PartitionID>4</PartitionID>
@@ -139,7 +131,7 @@ Helpful links:
 					</InstallTo>
 					<InstallToAvailablePartition>false</InstallToAvailablePartition>
 				</OSImage>
-			</ImageInstall>
+			</ImageInstall -->
 			<UserData>
 				<ProductKey>
 					<!-- Do not uncomment the Key element if you are using trial ISOs -->
@@ -200,7 +192,7 @@ Helpful links:
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<AutoLogon>
 				<Password>
-					<Value>password</Value>
+					<Value></Value>
 					<PlainText>true</PlainText>
 				</Password>
 				<Enabled>false</Enabled>
@@ -220,7 +212,7 @@ Helpful links:
 				<LocalAccounts>
 					<LocalAccount wcm:action="add">
 						<Password>
-							<Value>password</Value>
+							<Value></Value>
 							<PlainText>true</PlainText>
 						</Password>
 						<Description></Description>
