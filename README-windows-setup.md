@@ -18,6 +18,7 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 This will NOT PROMPT you to erase your hard drive; that decision will have been made, if you follow these instructions.
 
 * [Download the Autoattend.xml file](https://raw.githubusercontent.com/FlipperPA/windows-setup/main/Autounattend.xml) and save it to the root of the USB Drive you just created.
+    * You may want to edit the file to change the language (`en-US` is chosen), or the user and password created.
 * Boot to the USB Drive and start the installation.
 * The user account created will be named `admin` with the password `password`
 
