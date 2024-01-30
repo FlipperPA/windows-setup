@@ -13,7 +13,15 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 * When it prompts you, select the USB Drive from the dropdown
 * It will take about 20 minutes to create the drive
 
-## Step 2: Start the Windows 11 Installation
+## Step 2: Automatic Installation (WARNING: THIS WILL ERASE YOUR PRIMARY HARD DISK DRIVE.)
+
+This will NOT PROMPT you to erase your hard drive; that decision will have been made, if you follow these instructions.
+
+* [Download the Autoattend.xml file](https://raw.githubusercontent.com/FlipperPA/windows-setup/main/Autounattend.xml) and save it to the root of the USB Drive you just created.
+* Boot to the USB Drive and start the installation.
+* The user account created will be named `admin` with the password `password`
+
+## Step 2: Manual Installation
 
 * You'll want to make sure the computer doesn't have an internet connection during installation, if possible. Unplug any USB WiFi devices and ethernet cables before installing, or you won't be able to create a local administrator account.
 * Insert the USB Drive into the system where you are installing Windows 11.
@@ -28,7 +36,7 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 * After you have deleted the partitions, you should see only one entry, which says, `Drive 0 Unallocated Space`. Select it, then click `NEXT`.
 * Installation will now start and take about 20 minutes, depending on the speed of your drives. The system will reboot itself; when the system reboot, you can remove the USB Flash Drive.
 
-## Step 3: After Reboot
+### After the Reboot
 
 * Select your country or region (defaults to US) and click `YES`.
 * Select your keyboard layout (defaults to US) and click `YES`.
