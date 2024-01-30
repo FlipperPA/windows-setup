@@ -5,15 +5,6 @@
 Write-Output("Uninstalling all the packaged crapware; we will leave Windows Store so anything can be replaced...")
 DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename | % {$_ -replace("PackageName : ", "")} | select-string "^((?!WindowsStore).)*$" | select-string "^((?!SecHealthUI).)*$" | select-string "^((?!DesktopAppInstaller).)*$" | ForEach-Object {Remove-AppxPackage -allusers -package $_}
 
-Write-Output("Installing Winget package manager...")
-Add-AppxPackage 'https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx'
-Invoke-WebRequest https://www.nuget.org/api/v2/package/Microsoft.UI.Xaml/2.7.1 -OutFile ".\UI.Xaml.zip"
-Expand-Archive .\UI.Xaml.zip -DestinationPath ".\uixaml"
-Add-AppxPackage -Path ".\uixaml\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx"
-Add-AppxPackage 'https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
-Remove-Item .\uixaml\ -Recurse
-Remove-Item .\UI.Xaml.zip
-
 Write-Output("Uninstalling more crap we probably don't want, like apps for OneDrive, Spotify, and Disney+...")
 winget uninstall "Cortana" --silent --accept-source-agreements
 winget uninstall "Disney+" --silent --accept-source-agreements
