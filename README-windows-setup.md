@@ -5,7 +5,7 @@
 
 ## Step 1: Create a Bootable Windows Installation USB Drive
 
-This first step has to occur on an existing Windows system. Insert the USB Drive (which will be deleted!) into the system.
+This first step has to occur on an existing Windows system. Insert the USB Drive (which will be erased!) into the system.
 
 * [Download the Windows 11 Media Creation Tool](https://go.microsoft.com/fwlink/?linkid=2156295) to the desktop
 * Run the program from the desktop
@@ -15,10 +15,14 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 ## Step 2: Automatic Installation
 
 * [Download the Autoattend.xml file](https://raw.githubusercontent.com/FlipperPA/windows-setup/main/Autounattend.xml) and save it to the root of the USB Drive you just created.
-    * You may want to edit the file to change the language (`en-US` is chosen), or the user and password created.
+    * You may want to edit the file to change the language (`en-US` is chosen).
 * Boot to the USB Drive and start the installation.
-    * You can choose which version of Windows 11 to install, and the destination.
-* The user account created will be named `admin` with the no password.
+    * The user account created will be named `admin` with the no password.
+    * You can choose which version of Windows 11 to install, and which drive to install Windows on.
+    * For a completely fresh install, delete all of the existing partitions, and choose the remaining "Unallocated Space" as your installation location.
+        * THIS WILL DELETE ALL DATA ON THE DISK!
+
+![image](https://github.com/FlipperPA/windows-setup/assets/68164/2c9bf551-48d3-49b4-9735-fd38747ee042)
 
 ## Step 2: Manual Installation
 
