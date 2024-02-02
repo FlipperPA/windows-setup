@@ -1,4 +1,4 @@
-# How to Install Windows 11
+# Creating a Clean Installation of Windows 11
 
 * These instructions allow you to do a clean install of Windows 11 on a computer. Be sure to back up any data you may want o save from the computer before proceeding.
 * You will need a USB Drive that is 8 GB or larger.
