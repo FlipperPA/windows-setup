@@ -12,7 +12,7 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 * When it prompts you, select the USB Drive from the dropdown
 * It will take about 20 minutes to create the drive
 
-## Step 2: Automatic Installation
+## Step 2 the Easy Way: Automatic Installation
 
 * [Download the Autoattend.xml file](https://raw.githubusercontent.com/FlipperPA/windows-setup/main/Autounattend.xml) and save it to the root of the USB Drive you just created.
     * You may want to edit the file to change the language (`en-US` is chosen).
@@ -24,7 +24,11 @@ This first step has to occur on an existing Windows system. Insert the USB Drive
 
 ![image](https://github.com/FlipperPA/windows-setup/assets/68164/2c9bf551-48d3-49b4-9735-fd38747ee042)
 
-## Step 2: Manual Installation
+* Once you click the `Next` button, the rest of the installation should happen automatically.
+
+## Step 2 the Hard Way: Manual Installation
+
+If you want to tweak more settings during the process, here's how to do it manually.
 
 * You'll want to make sure the computer doesn't have an internet connection during installation, if possible. Unplug any USB WiFi devices and ethernet cables before installing, or you won't be able to create a local administrator account.
 * Insert the USB Drive into the system where you are installing Windows 11.
