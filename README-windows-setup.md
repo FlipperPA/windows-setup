@@ -1,8 +1,7 @@
 # How to Install Windows 11
 
-**IMPORTANT!** These instructions are written to completely delete any data on the system that you're going to install Windows on. The instructions may vary from model to model, as you may have to go into your system's BIOS to ensure you can boot from a USB device.
-
-You will need a USB Drive that is 8 GB or larger.
+* These instructions allow you to do a clean install of Windows 11 on a computer. Be sure to back up any data you may want o save from the computer before proceeding.
+* You will need a USB Drive that is 8 GB or larger.
 
 ## Step 1: Create a Bootable Windows Installation USB Drive
 
