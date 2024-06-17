@@ -74,6 +74,10 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection
 
 # Disable Copilot
 New-Item -Path 'HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot' -Name 'TurnOffWindowsCopilot' -Value '1' -f
+New-Item -Path 'HKLM\Software\Policies\Microsoft\Windows\WindowsCopilot' -Name 'TurnOffWindowsCopilot' -Value '1' -f
+New-Item -Path 'HKLM\Software\Policies\Microsoft\Edge' -Name 'HubsSidebarEnabled' -Value '0' -f
+New-Item -Path 'HKCU\Software\Policies\Microsoft\Windows\Explorer' -Name 'DisableSearchBoxSuggestions' -Value '1' -f
+New-Item -Path 'HKLM\Software\Policies\Microsoft\Windows\Explorer' -Name 'DisableSearchBoxSuggestions' -Value '1' -f
 
 # Currently, we cannot restore the Classic Taskbar or enable any of the features because it breaks the Start Menu.
 # The only way to enable that is with a third-party start menu when Undocking is disabled. :(
