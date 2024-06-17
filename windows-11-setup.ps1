@@ -75,6 +75,7 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection
 # Disable Copilot
 New-Item -Path 'HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot' -Name 'TurnOffWindowsCopilot' -Value '1' -f
 New-Item -Path 'HKLM\Software\Policies\Microsoft\Windows\WindowsCopilot' -Name 'TurnOffWindowsCopilot' -Value '1' -f
+New-Item -Path 'HKLM\Software\Policies\Microsoft\Windows\Windows Search' -Name 'EnableDynamicContentInWSB' -Value '0' -f
 New-Item -Path 'HKLM\Software\Policies\Microsoft\Edge' -Name 'HubsSidebarEnabled' -Value '0' -f
 New-Item -Path 'HKCU\Software\Policies\Microsoft\Windows\Explorer' -Name 'DisableSearchBoxSuggestions' -Value '1' -f
 New-Item -Path 'HKLM\Software\Policies\Microsoft\Windows\Explorer' -Name 'DisableSearchBoxSuggestions' -Value '1' -f
