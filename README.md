@@ -31,11 +31,6 @@ rm .\windows-setup.ps1
 
 [This handy app](https://github.com/valinet/ExplorerPatcher) will restore the never-combine style Windows 10 taskbar. Highly recommended!
 
-```
-# TeamViewer
-winget install "TeamViewer: Remote Control"
-```
-
 #### Telemetry and Data Collection
 
 The PowerShell script above is a good start, but [the ShutUp application](https://www.oo-software.com/en/shutup10) is also HIGHLY recommend to shut off the rest of MSFT's Big Brother spyware.
